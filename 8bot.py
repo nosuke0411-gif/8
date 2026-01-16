@@ -154,10 +154,10 @@ async def slot(interaction: discord.Interaction, bet: int):
         coins += winnings
         result_text = f"🎉 ジャックポット！{winnings}コイン獲得！"
     elif roll[0] == roll[1] or roll[1] == roll[2] or roll[0] == roll[2]:
-    coins -= bet  # まず全額引く
-    refund = int(bet * 0.5)
-    coins += refund  # その後、半分だけ返す
-    result_text = f"🔁 2つ一致！{refund}コイン返ってきたよ！"
+        coins -= bet  # まず全額引く
+        refund = int(bet * 0.5)
+        coins += refund  # その後、半分だけ返す
+        result_text = f"🔁 2つ一致！{refund}コイン返ってきたよ！"
 
     else:
         coins -= bet
